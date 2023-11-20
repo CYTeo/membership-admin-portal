@@ -1,0 +1,28 @@
+$center: center;
+$marginBottom2em: 0 0 2em 0 !important;
+$flex: flex;
+$lightBlack: #606060;
+
+.login-container {
+  margin: 3em auto !important;
+  align-items: $center !important;
+  text-align: $center;
+  display: flex;
+  justify-content: $center;
+  height: 75vh;
+}
+
+.login-form {
+  background-color: #fbfbfb;
+  padding: 2em;
+  border-radius: 1em 3em;
+  box-shadow: rgba(17, 17, 26, 0.1) 1px 1px 4px 0px;
+  border: solid 1px #e0e0e080;
+  align-items: $center !important;
+}
+
+.login-prompt {
+  display: flex;
+  color: $lightBlack;
+  //   margin: $marginBottom2em;
+}
