@@ -19,14 +19,16 @@ export default function BasicLayout(props: any) {
       <Sider style={siderStyle} className="sitelayout-sider" theme="light">
         <Sidebar />
       </Sider>
-      <Layout>
+      <Layout className="content-layout">
         <Content className="content">
           <div>{props.children}</div>
           {/* <Home /> */}
         </Content>
         <Footer
           style={{
-            textAlign: 'center'
+            textAlign: 'center',
+            padding: '8px 50px',
+            zIndex: 999
           }}
         >
           Copyright © 2023. All rights are reserved

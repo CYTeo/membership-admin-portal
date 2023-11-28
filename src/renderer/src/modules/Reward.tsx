@@ -3,6 +3,7 @@ import { Button, Col, Row, Space, Typography } from 'antd'
 import { FaPlus } from 'react-icons/fa'
 
 import React from 'react'
+import CustomButton from '@renderer/components/buttons/CustomButton'
 
 export default function Reward() {
   return (
@@ -10,24 +11,8 @@ export default function Reward() {
       <Space direction="vertical">
         <Typography.Title level={4}>Rewards</Typography.Title>
         <Row justify="end" align={'middle'}>
-          {/* <Col span={24}> */}
-          <Button
-            icon={<FaPlus />}
-            type="primary"
-            style={{
-              fontWeight: 'bold',
-              display: 'flex',
-              justifyContent: 'end',
-              width: 80,
-              textAlign: 'center',
-              alignItems: 'center'
-            }}
-          >
-            Add
-          </Button>
-          {/* </Col> */}
+          <CustomButton icon={<FaPlus />} title={'ADD'} />
         </Row>
-
         <RewardList />
       </Space>
     </div>
