@@ -15,6 +15,12 @@ export default defineConfig({
         '@renderer': resolve('src/renderer/src')
       }
     },
+    server: {
+      host: 'localhost',
+      headers: {
+        'Content-Security-Policy': "default-src 'self'; connect-src 'self' http://213.35.113.98;"
+      }
+    },
     plugins: [react()]
   }
 })

@@ -4,10 +4,15 @@
     <meta charset="UTF-8" />
     <title>Membership Admin Portal</title>
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta
+    <!-- <meta
       http-equiv="Content-Security-Policy"
       content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'"
+    /> -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self' *; style-src 'self' 'unsafe-inline';"
     />
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' http://213.35.113.98;" /> -->
   </head>
 
   <body>

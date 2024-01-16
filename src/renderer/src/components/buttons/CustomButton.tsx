@@ -2,8 +2,9 @@ import { Button } from 'antd'
 import React from 'react'
 
 interface ButtonProps {
+  onClick(): void
   icon: any
-  title:string
+  title: string
 }
 
 export default function CustomButton(props: ButtonProps) {
@@ -12,13 +13,13 @@ export default function CustomButton(props: ButtonProps) {
       icon={props?.icon}
       type="primary"
       style={{
-        fontWeight: 'bold',
         display: 'flex',
         justifyContent: 'end',
-        width: 80,
+        // width: 80,
         textAlign: 'center',
         alignItems: 'center'
       }}
+      onClick={() => props?.onClick()}
     >
       {props?.title}
     </Button>

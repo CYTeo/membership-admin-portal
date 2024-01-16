@@ -1,8 +1,9 @@
 import IMAGES from '@renderer/assets'
+import { getRewardList, testing } from '@renderer/services/api/reward'
 import { rewardList } from '@renderer/utils/dummydata/rewards'
 import { Button, Card, Col, Image, Row, Typography } from 'antd'
 import Meta from 'antd/es/card/Meta'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { FcRemoveImage } from 'react-icons/fc'
 
 interface Reward {
@@ -16,8 +17,23 @@ interface Reward {
 }
 
 export default function RewardList() {
-  const fetchRewardList = () => {
-    // axios call api and get data from BE
+  useEffect(() => {
+    fetchRewardList()
+  }, [])
+
+  const fetchRewardList = async () => {
+    // call api and get data from BE
+    await testing().then((res: any) => {
+      console.log('testing: ', res)
+    })
+
+    // const response = await fetch('https://hub.dummyapis.com/employee', { mode: 'no-cors' })
+    // const employee = await response.json()
+    // console.log('employee ', employee)
+
+    // await testing().then((res: any) => {
+    //   console.log(res)
+    // })
   }
   return (
     <div>
@@ -31,7 +47,7 @@ export default function RewardList() {
               sm={8}
               md={8}
               lg={6}
-              xl={6}
+              xl={4}
               className="reward-list-col"
             >
               <Card
